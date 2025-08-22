@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -52,6 +53,12 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				luxury: {
+					gold: 'hsl(var(--luxury-gold))',
+					champagne: 'hsl(var(--luxury-champagne))',
+					charcoal: 'hsl(var(--luxury-charcoal))',
+					pearl: 'hsl(var(--luxury-pearl))',
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -62,6 +69,11 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				}
+			},
+			fontFamily: {
+				'luxury': ['Playfair Display', 'serif'],
+				'elegant': ['Cormorant Garamond', 'serif'],
+				'body': ['Inter', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +96,42 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'luxury-fade-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(20px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'luxury-slide-up': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(30px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'luxury-zoom': {
+					'0%': {
+						transform: 'scale(1)'
+					},
+					'100%': {
+						transform: 'scale(1.05)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'luxury-fade-in': 'luxury-fade-in 0.8s ease-out',
+				'luxury-slide-up': 'luxury-slide-up 1s ease-out',
+				'luxury-zoom': 'luxury-zoom 0.5s ease-out'
 			}
 		}
 	},
