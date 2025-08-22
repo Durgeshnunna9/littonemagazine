@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Play } from 'lucide-react';
 
 const HeroSection = () => {
   return (
@@ -9,34 +9,55 @@ const HeroSection = () => {
       <div className="absolute inset-0 z-0">
         <img
           src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
-          alt="Luxury Magazine Hero"
+          alt="Luxury lifestyle"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/40" />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center text-white px-6 max-w-4xl mx-auto">
-        <div className="animate-luxury-fade-in">
-          <h1 className="text-luxury-headline text-white mb-6">
-            The Art of
-            <span className="block text-accent italic">Luxury Living</span>
-          </h1>
-          <p className="text-luxury-subtitle text-white/90 mb-8 max-w-2xl mx-auto">
-            Discover the finest in fashion, culture, and lifestyle. 
-            Where sophistication meets modern elegance.
-          </p>
-          <button className="btn-luxury-gold inline-flex items-center gap-2 group">
-            Explore Stories
-            <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform duration-300" />
+      <div className="relative z-10 text-center text-white px-6 max-w-5xl mx-auto">
+        <div className="mb-6">
+          <span className="px-4 py-2 bg-accent text-accent-foreground text-sm font-medium uppercase tracking-wider rounded-full">
+            Featured Story
+          </span>
+        </div>
+        
+        <h1 className="text-luxury-headline text-white mb-6 animate-luxury-fade-in">
+          The Art of Modern <span className="text-accent italic">Luxury</span>
+        </h1>
+        
+        <p className="text-luxury-subtitle text-white/90 mb-8 max-w-3xl mx-auto animate-luxury-slide-up">
+          Discover how contemporary designers are redefining luxury through sustainable practices, 
+          innovative materials, and timeless craftsmanship that speaks to the modern soul.
+        </p>
+
+        <div className="flex items-center justify-center gap-4 animate-luxury-slide-up" style={{ animationDelay: '0.2s' }}>
+          <button className="btn-luxury-primary group">
+            Read Full Story
+            <ArrowRight size={16} className="ml-2 transition-transform group-hover:translate-x-1" />
           </button>
+          
+          <button className="btn-luxury-secondary group">
+            <Play size={16} className="mr-2" />
+            Watch Video
+          </button>
+        </div>
+
+        {/* Story Meta */}
+        <div className="mt-12 flex items-center justify-center gap-8 text-sm text-white/70 animate-luxury-fade-in" style={{ animationDelay: '0.4s' }}>
+          <span>By Isabella Chen</span>
+          <span>•</span>
+          <span>December 22, 2023</span>
+          <span>•</span>
+          <span>12 min read</span>
         </div>
       </div>
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-white/70 rounded-full mt-2"></div>
+          <div className="w-1 h-3 bg-white/50 rounded-full mt-2 animate-pulse" />
         </div>
       </div>
     </section>
