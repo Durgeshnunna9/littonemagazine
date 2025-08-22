@@ -1,3 +1,4 @@
+
 import React from 'react';
 import ArticleCard from './ArticleCard';
 import { ArrowRight } from 'lucide-react';
@@ -67,8 +68,7 @@ const FeaturedArticles = () => {
           {featuredArticles.map((article, index) => (
             <div 
               key={article.id} 
-              className={`animate-luxury-slide-up ${index === 0 ? 'lg:col-span-2 lg:row-span-2' : ''}`}
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className={`${index === 0 ? 'lg:col-span-2 lg:row-span-2' : ''}`}
             >
               <ArticleCard {...article} featured={index === 0} />
             </div>

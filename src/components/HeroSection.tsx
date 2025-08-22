@@ -15,24 +15,24 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-black/40" />
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 text-center text-white px-6 max-w-5xl mx-auto">
+      {/* Content - Fixed visibility */}
+      <div className="relative z-10 text-center text-white px-6 max-w-5xl mx-auto opacity-100">
         <div className="mb-6">
           <span className="px-4 py-2 bg-accent text-accent-foreground text-sm font-medium uppercase tracking-wider rounded-full">
             Featured Story
           </span>
         </div>
         
-        <h1 className="text-luxury-headline text-white mb-6 animate-luxury-fade-in">
+        <h1 className="text-luxury-headline text-white mb-6">
           The Art of Modern <span className="text-accent italic">Luxury</span>
         </h1>
         
-        <p className="text-luxury-subtitle text-white/90 mb-8 max-w-3xl mx-auto animate-luxury-slide-up">
+        <p className="text-luxury-subtitle text-white/90 mb-8 max-w-3xl mx-auto">
           Discover how contemporary designers are redefining luxury through sustainable practices, 
           innovative materials, and timeless craftsmanship that speaks to the modern soul.
         </p>
 
-        <div className="flex items-center justify-center gap-4 animate-luxury-slide-up" style={{ animationDelay: '0.2s' }}>
+        <div className="flex items-center justify-center gap-4">
           <button className="btn-luxury-primary group">
             Read Full Story
             <ArrowRight size={16} className="ml-2 transition-transform group-hover:translate-x-1" />
@@ -45,7 +45,7 @@ const HeroSection = () => {
         </div>
 
         {/* Story Meta */}
-        <div className="mt-12 flex items-center justify-center gap-8 text-sm text-white/70 animate-luxury-fade-in" style={{ animationDelay: '0.4s' }}>
+        <div className="mt-12 flex items-center justify-center gap-8 text-sm text-white/70">
           <span>By Isabella Chen</span>
           <span>•</span>
           <span>December 22, 2023</span>

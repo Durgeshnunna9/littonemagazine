@@ -28,7 +28,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
 }) => {
   return (
     <Link to={`/article/${id}`} className="group block">
-      <article className={`card-luxury h-full ${featured ? 'md:h-auto' : ''}`}>
+      <article className={`card-luxury h-full ${featured ? 'md:h-auto' : ''} opacity-100`}>
         <div className="relative overflow-hidden">
           <img
             src={image}
