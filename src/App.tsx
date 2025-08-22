@@ -11,6 +11,10 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Features from "./pages/Features";
 import Interviews from "./pages/Interviews";
+import Fashion from "./pages/Fashion";
+import Lifestyle from "./pages/Lifestyle";
+import Culture from "./pages/Culture";
+import Architecture from "./pages/Architecture";
 import Careers from "./pages/Careers";
 import Privacy from "./pages/Privacy";
 import Newsletter from "./pages/Newsletter";
@@ -42,10 +46,10 @@ const App = () => (
           <Route path="/press" element={<PressKit />} />
           <Route path="/brand" element={<BrandGuidelines />} />
           {/* Category routes */}
-          <Route path="/category/fashion" element={<Articles />} />
-          <Route path="/category/lifestyle" element={<Articles />} />
-          <Route path="/category/culture" element={<Articles />} />
-          <Route path="/category/architecture" element={<Articles />} />
+          <Route path="/category/fashion" element={<Fashion />} />
+          <Route path="/category/lifestyle" element={<Lifestyle />} />
+          <Route path="/category/culture" element={<Culture />} />
+          <Route path="/category/architecture" element={<Architecture />} />
           <Route path="/terms" element={<Privacy />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

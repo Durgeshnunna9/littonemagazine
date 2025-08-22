@@ -10,6 +10,10 @@ const Navigation = () => {
   const navItems = [
     { label: 'Home', path: '/' },
     { label: 'Articles', path: '/articles' },
+    { label: 'Fashion', path: '/category/fashion' },
+    { label: 'Lifestyle', path: '/category/lifestyle' },
+    { label: 'Culture', path: '/category/culture' },
+    { label: 'Architecture', path: '/category/architecture' },
     { label: 'Features', path: '/features' },
     { label: 'Interviews', path: '/interviews' },
     { label: 'About', path: '/about' },
@@ -24,8 +28,8 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="text-luxury-title font-luxury font-bold">
-            <span className="text-foreground">LUXE</span>
-            <span className="text-accent">.</span>
+            <span className="text-foreground">LIT TONE</span>
+            <span className="text-accent"> MAGAZINE</span>
           </Link>
 
           {/* Desktop Navigation */}

@@ -48,8 +48,8 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="md:col-span-1">
             <Link to="/" className="text-luxury-title font-luxury font-bold mb-4 block">
-              <span className="text-foreground">LUXE</span>
-              <span className="text-accent">.</span>
+              <span className="text-foreground">LIT TONE</span>
+              <span className="text-accent"> MAGAZINE</span>
             </Link>
             <p className="text-muted-foreground mb-6 max-w-sm">
               Defining contemporary luxury through exceptional storytelling 
@@ -96,7 +96,7 @@ const Footer = () => {
         <div className="pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-muted-foreground text-sm font-elegant">
-              © 2023 Luxe Magazine. All rights reserved.
+              © 2023 Lit Tone Magazine. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link to="/terms" className="text-muted-foreground hover:text-accent transition-colors duration-300 text-sm">
