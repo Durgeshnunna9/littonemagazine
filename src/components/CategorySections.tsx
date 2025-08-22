@@ -1,135 +1,163 @@
 
 import React from 'react';
 import ArticleCard from './ArticleCard';
-import { ArrowRight, Sparkles, Palette, Globe, Building } from 'lucide-react';
+import { ArrowRight, Sparkles, TrendingUp, Users, Camera } from 'lucide-react';
 
 const CategorySections = () => {
   const categories = [
     {
-      name: 'Lifestyle',
+      id: 'fashion',
+      name: 'Fashion',
       icon: Sparkles,
-      description: 'Wellness, travel, and the art of refined living',
+      description: 'Haute couture, emerging designers, and the art of personal style',
+      color: 'from-pink-500 to-rose-500',
       articles: [
         {
-          id: '5',
-          title: 'Wellness Retreats for the Modern Soul: A Journey Within',
-          excerpt: 'Discover transformative experiences at the world\'s most exclusive wellness retreats, where ancient healing practices meet contemporary luxury in breathtaking natural settings.',
-          image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-          category: 'Lifestyle',
-          author: 'Emma Thompson',
-          date: 'Dec 8, 2023',
-          readTime: '9 min read'
-        },
-        {
-          id: '6',
-          title: 'The Future of Sustainable Luxury: Conscious Consumption',
-          excerpt: 'How eco-consciousness is reshaping the luxury industry, from carbon-neutral private jets to lab-grown diamonds that rival nature\'s finest creations.',
-          image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-          category: 'Lifestyle',
-          author: 'James Morrison',
-          date: 'Dec 5, 2023',
-          readTime: '11 min read'
-        },
-        {
-          id: '7',
-          title: 'Private Island Escapes: The Ultimate Luxury Experience',
-          excerpt: 'Explore the world\'s most exclusive private island resorts where pristine beaches, personalized service, and complete privacy create the ultimate luxury escape.',
-          image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-          category: 'Lifestyle',
-          author: 'Aria Nakamura',
-          date: 'Dec 3, 2023',
-          readTime: '7 min read'
-        }
-      ]
-    },
-    {
-      name: 'Culture',
-      icon: Palette,
-      description: 'Art, literature, and cultural movements shaping our world',
-      articles: [
-        {
-          id: '8',
-          title: 'Contemporary Art\'s Digital Renaissance: NFTs and Beyond',
-          excerpt: 'How technology is transforming the way we create, collect, and experience art, from virtual galleries to blockchain-verified masterpieces.',
-          image: 'https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixlib=rb-4.0.3&auto=format&fit=crop&w=2058&q=80',
-          category: 'Culture',
-          author: 'Viktor Petrov',
-          date: 'Dec 3, 2023',
-          readTime: '13 min read'
-        },
-        {
-          id: '9',
-          title: 'The Poetry of Modern Dance: Movement as Language',
-          excerpt: 'Exploring the intersection of classical ballet technique and contemporary expression through the lens of today\'s most innovative choreographers.',
-          image: 'https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-          category: 'Culture',
-          author: 'Sofia Rodriguez',
-          date: 'Nov 30, 2023',
+          id: 'fashion-1',
+          title: 'Sustainable Couture: The Green Revolution in High Fashion',
+          excerpt: 'How luxury fashion houses are embracing eco-friendly practices without compromising on elegance and craftsmanship.',
+          image: 'https://images.unsplash.com/photo-1469334031218-e382a71b716b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+          category: 'Fashion',
+          author: 'Isabella Chen',
+          date: 'Dec 20, 2023',
           readTime: '8 min read'
         },
         {
-          id: '10',
-          title: 'Literary Salons: The Revival of Intellectual Gatherings',
-          excerpt: 'How modern literary salons are creating intimate spaces for intellectual discourse, bringing together writers, thinkers, and cultural influencers.',
-          image: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-          category: 'Culture',
-          author: 'Isabella Chen',
-          date: 'Nov 28, 2023',
-          readTime: '6 min read'
-        }
-      ]
-    },
-    {
-      name: 'Travel',
-      icon: Globe,
-      description: 'Exclusive destinations and transformative journeys',
-      articles: [
-        {
-          id: '11',
-          title: 'Antarctica Expeditions: Luxury at the End of the World',
-          excerpt: 'Experience the raw beauty of Antarctica aboard ultra-luxury expedition vessels that combine adventure with five-star comfort and environmental responsibility.',
-          image: 'https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2071&q=80',
-          category: 'Travel',
+          id: 'fashion-2',
+          title: 'The New York Fashion Week: Behind the Scenes',
+          excerpt: 'Exclusive access to the most anticipated shows and the stories that shaped this season\'s narrative.',
+          image: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2048&q=80',
+          category: 'Fashion',
           author: 'Marcus Webb',
-          date: 'Nov 25, 2023',
-          readTime: '14 min read'
+          date: 'Dec 18, 2023',
+          readTime: '12 min read'
         },
         {
-          id: '12',
-          title: 'Japanese Ryokans: The Art of Hospitality Perfected',
-          excerpt: 'Discover the centuries-old tradition of Japanese hospitality through stays at the country\'s most exclusive ryokans, where every detail is a meditation on perfection.',
-          image: 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-          category: 'Travel',
-          author: 'Aria Nakamura',
-          date: 'Nov 22, 2023',
+          id: 'fashion-3',
+          title: 'Emerging Designers to Watch in 2024',
+          excerpt: 'Meet the next generation of fashion visionaries who are redefining luxury and pushing creative boundaries.',
+          image: 'https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2048&q=80',
+          category: 'Fashion',
+          author: 'Sofia Rodriguez',
+          date: 'Dec 16, 2023',
           readTime: '10 min read'
         }
       ]
     },
     {
-      name: 'Architecture',
-      icon: Building,
-      description: 'Innovative design and architectural excellence',
+      id: 'lifestyle',
+      name: 'Lifestyle',
+      icon: TrendingUp,
+      description: 'Wellness, luxury living, and the pursuit of excellence in daily life',
+      color: 'from-emerald-500 to-teal-500',
       articles: [
         {
-          id: '13',
-          title: 'Floating Architecture: Cities on Water',
-          excerpt: 'Pioneering architects are creating floating communities that challenge our understanding of urban living while addressing climate change and rising sea levels.',
-          image: 'https://images.unsplash.com/photo-1600607687644-c7171b42498f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2053&q=80',
-          category: 'Architecture',
+          id: 'lifestyle-1',
+          title: 'Wellness Retreats: Finding Balance in Luxury',
+          excerpt: 'The world\'s most exclusive wellness destinations where luxury meets mindfulness and personal transformation.',
+          image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+          category: 'Lifestyle',
+          author: 'Emma Thompson',
+          date: 'Dec 19, 2023',
+          readTime: '15 min read'
+        },
+        {
+          id: 'lifestyle-2',
+          title: 'The Art of Luxury Home Design',
+          excerpt: 'How interior designers are creating spaces that reflect personal style while maintaining timeless elegance.',
+          image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2058&q=80',
+          category: 'Lifestyle',
           author: 'James Morrison',
-          date: 'Nov 20, 2023',
+          date: 'Dec 17, 2023',
+          readTime: '11 min read'
+        },
+        {
+          id: 'lifestyle-3',
+          title: 'Premium Skincare: The Science Behind Beauty',
+          excerpt: 'Exploring the innovative technologies and rare ingredients that define the luxury beauty industry.',
+          image: 'https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&auto=format&fit=crop&w=2080&q=80',
+          category: 'Lifestyle',
+          author: 'Dr. Sarah Chen',
+          date: 'Dec 15, 2023',
+          readTime: '9 min read'
+        }
+      ]
+    },
+    {
+      id: 'culture',
+      name: 'Culture',
+      icon: Users,
+      description: 'Art, literature, music, and the cultural movements shaping our world',
+      color: 'from-purple-500 to-indigo-500',
+      articles: [
+        {
+          id: 'culture-1',
+          title: 'Contemporary Art: The Digital Renaissance',
+          excerpt: 'How technology is transforming artistic expression and creating new forms of cultural engagement.',
+          image: 'https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixlib=rb-4.0.3&auto=format&fit=crop&w=2058&q=80',
+          category: 'Culture',
+          author: 'Viktor Petrov',
+          date: 'Dec 21, 2023',
+          readTime: '13 min read'
+        },
+        {
+          id: 'culture-2',
+          title: 'The Renaissance of Classical Music',
+          excerpt: 'Young musicians and innovative venues are bringing classical music to new audiences worldwide.',
+          image: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+          category: 'Culture',
+          author: 'Aria Nakamura',
+          date: 'Dec 19, 2023',
+          readTime: '16 min read'
+        },
+        {
+          id: 'culture-3',
+          title: 'Literary Salons: Where Ideas Come Alive',
+          excerpt: 'The revival of intimate literary gatherings in the world\'s most cultured cities.',
+          image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&q=80',
+          category: 'Culture',
+          author: 'Alexander Stone',
+          date: 'Dec 17, 2023',
+          readTime: '14 min read'
+        }
+      ]
+    },
+    {
+      id: 'architecture',
+      name: 'Architecture',
+      icon: Camera,
+      description: 'Innovative design, sustainable building, and spaces that inspire',
+      color: 'from-orange-500 to-red-500',
+      articles: [
+        {
+          id: 'architecture-1',
+          title: 'Sustainable Architecture: Building for Tomorrow',
+          excerpt: 'How architects are creating beautiful, environmentally conscious structures that redefine luxury living.',
+          image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2053&q=80',
+          category: 'Architecture',
+          author: 'Marcus Webb',
+          date: 'Dec 20, 2023',
           readTime: '12 min read'
         },
         {
-          id: '14',
-          title: 'Biophilic Design: Nature as Architecture',
-          excerpt: 'How leading architects are incorporating living elements into their designs, creating spaces that blur the boundaries between indoor and outdoor environments.',
-          image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2053&q=80',
+          id: 'architecture-2',
+          title: 'The Future of Luxury Hotels',
+          excerpt: 'Innovative hospitality design that combines comfort, technology, and unforgettable experiences.',
+          image: 'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
           category: 'Architecture',
-          author: 'Emma Thompson',
-          date: 'Nov 18, 2023',
-          readTime: '9 min read'
+          author: 'Elena Rodriguez',
+          date: 'Dec 18, 2023',
+          readTime: '10 min read'
+        },
+        {
+          id: 'architecture-3',
+          title: 'Residential Masterpieces: Homes as Art',
+          excerpt: 'Private residences that blur the line between architecture and sculpture.',
+          image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+          category: 'Architecture',
+          author: 'David Chen',
+          date: 'Dec 16, 2023',
+          readTime: '14 min read'
         }
       ]
     }
@@ -138,48 +166,68 @@ const CategorySections = () => {
   return (
     <section className="section-luxury">
       <div className="container-luxury">
-        {categories.map((category, categoryIndex) => (
-          <div key={category.name} className="mb-20 last:mb-0">
-            <div className="flex items-center justify-between mb-8">
-              <div className="flex items-center gap-4">
-                <div className="flex items-center justify-center w-12 h-12 bg-accent/10 rounded-full">
-                  <category.icon size={24} className="text-accent" />
-                </div>
-                <div>
-                  <h2 className="text-luxury-title">{category.name}</h2>
-                  <p className="text-muted-foreground text-sm">{category.description}</p>
-                </div>
-              </div>
-              <button className="link-luxury text-sm font-medium uppercase tracking-wider group">
-                View All
-                <ArrowRight size={14} className="ml-2 transition-transform group-hover:translate-x-1" />
-              </button>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {category.articles.map((article, index) => (
-                <div 
-                  key={article.id} 
-                  className="animate-luxury-slide-up" 
-                  style={{ animationDelay: `${(categoryIndex * 3 + index) * 0.1}s` }}
-                >
-                  <ArticleCard {...article} />
-                </div>
-              ))}
-            </div>
+        <div className="text-center mb-16">
+          <div className="mb-4">
+            <span className="px-3 py-1 bg-accent/10 text-accent text-sm font-medium uppercase tracking-wider rounded-full">
+              Editorial Categories
+            </span>
           </div>
-        ))}
-
-        {/* Newsletter Teaser */}
-        <div className="text-center mt-16 p-8 bg-luxury-pearl rounded-2xl">
-          <h3 className="text-luxury-subtitle mb-4">Stay Updated</h3>
-          <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-            Join our exclusive community of luxury enthusiasts and receive weekly insights, 
-            behind-the-scenes content, and early access to our most compelling stories.
+          <h2 className="text-luxury-title mb-4">Explore by Interest</h2>
+          <p className="text-luxury-subtitle max-w-2xl mx-auto">
+            Dive deep into the subjects that define contemporary luxury culture, 
+            from haute couture to architectural marvels
           </p>
-          <button className="btn-luxury-primary">
-            Subscribe to Our Newsletter
-          </button>
+        </div>
+
+        <div className="space-y-20">
+          {categories.map((category, categoryIndex) => (
+            <div key={category.id} className="animate-luxury-slide-up" style={{ animationDelay: `${categoryIndex * 0.2}s` }}>
+              {/* Category Header */}
+              <div className="flex items-center justify-between mb-8">
+                <div className="flex items-center gap-4">
+                  <div className={`w-12 h-12 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center text-white`}>
+                    <category.icon size={24} />
+                  </div>
+                  <div>
+                    <h3 className="text-luxury-title">{category.name}</h3>
+                    <p className="text-muted-foreground">{category.description}</p>
+                  </div>
+                </div>
+                <button className="btn-luxury-secondary group">
+                  View All {category.name}
+                  <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                </button>
+              </div>
+
+              {/* Articles Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {category.articles.map((article, articleIndex) => (
+                  <div 
+                    key={article.id} 
+                    className="animate-luxury-slide-up" 
+                    style={{ animationDelay: `${(categoryIndex * 0.2) + (articleIndex * 0.1)}s` }}
+                  >
+                    <ArticleCard {...article} />
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Call to Action */}
+        <div className="text-center mt-16">
+          <div className="bg-luxury-pearl rounded-2xl p-12">
+            <h3 className="text-luxury-title mb-4">Discover More Stories</h3>
+            <p className="text-luxury-subtitle mb-8 max-w-2xl mx-auto">
+              Explore our complete archive of luxury lifestyle content, 
+              featuring exclusive interviews, behind-the-scenes access, and cultural insights
+            </p>
+            <button className="btn-luxury-primary">
+              Browse All Articles
+              <ArrowRight size={16} className="ml-2" />
+            </button>
+          </div>
         </div>
       </div>
     </section>

@@ -9,6 +9,14 @@ import Articles from "./pages/Articles";
 import Article from "./pages/Article";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import Features from "./pages/Features";
+import Interviews from "./pages/Interviews";
+import Careers from "./pages/Careers";
+import Privacy from "./pages/Privacy";
+import Newsletter from "./pages/Newsletter";
+import Advertise from "./pages/Advertise";
+import PressKit from "./pages/PressKit";
+import BrandGuidelines from "./pages/BrandGuidelines";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -23,10 +31,22 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/articles" element={<Articles />} />
           <Route path="/article/:id" element={<Article />} />
+          <Route path="/features" element={<Features />} />
+          <Route path="/interviews" element={<Interviews />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/features" element={<Articles />} />
-          <Route path="/interviews" element={<Articles />} />
+          <Route path="/careers" element={<Careers />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/newsletter" element={<Newsletter />} />
+          <Route path="/advertise" element={<Advertise />} />
+          <Route path="/press" element={<PressKit />} />
+          <Route path="/brand" element={<BrandGuidelines />} />
+          {/* Category routes */}
+          <Route path="/category/fashion" element={<Articles />} />
+          <Route path="/category/lifestyle" element={<Articles />} />
+          <Route path="/category/culture" element={<Articles />} />
+          <Route path="/category/architecture" element={<Articles />} />
+          <Route path="/terms" element={<Privacy />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
