@@ -11,7 +11,7 @@ const Footer = () => {
         { label: 'Fashion', href: '/category/fashion' },
         { label: 'Lifestyle', href: '/category/lifestyle' },
         { label: 'Culture', href: '/category/culture' },
-        { label: 'Architecture', href: '/category/architecture' }
+        // { label: 'Architecture', href: '/category/architecture' }
       ]
     },
     {
@@ -49,7 +49,6 @@ const Footer = () => {
           <div className="md:col-span-1">
             <Link to="/" className="text-luxury-title font-luxury font-bold mb-4 block">
               <span className="text-foreground">LIT TONE</span>
-              <span className="text-accent"> MAGAZINE</span>
             </Link>
             <p className="text-muted-foreground mb-6 max-w-sm">
               Defining contemporary luxury through exceptional storytelling 

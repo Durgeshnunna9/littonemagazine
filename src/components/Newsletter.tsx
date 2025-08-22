@@ -39,8 +39,8 @@ const Newsletter = () => {
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 25% 25%, #D4AF37 0%, transparent 50%), radial-gradient(circle at 75% 75%, #D4AF37 0%, transparent 50%)`,
-          backgroundSize: '200px 200px'
+          backgroundImage: `radial-gradient(circle at 25% 25%, #D4AF37 -50%, transparent 50%), radial-gradient(circle at 75% 75%, #D4AF37 -50%, transparent 50%)`,
+          
         }} />
       </div>
 
