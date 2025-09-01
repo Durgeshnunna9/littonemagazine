@@ -118,27 +118,45 @@ const Poem = () => {
           <div className="animate-luxury-slide-up">
             <div 
               className="prose prose-lg max-w-none text-luxury-body leading-relaxed">
-                <h3> Yes it was love</h3>
-                <p>
-                    I don't know when I first heard your name, A name so common, yet never the same.
+                <h1 className="text-4xl text-center pb-4 text-luxury-headline"> Yes it was love</h1>
+                <p className='text-center'>
+                    I don't know when I first heard your name, <br />
+                    A name so common, yet never the same. <br />
 
-                    Spoken by you, it felt so rare, A melody drifting in the air.
+                    Spoken by you, it felt so rare, <br />
+                    A melody drifting in the air. <br />
+                    <br />
 
-                    Then I saw your art, your gentle hand, Lines and colors I couldn't withstand.
+                    Then I saw your art, your gentle hand, <br />
+                    Lines and colors I couldn't withstand. <br />
 
-                    I fell for your world, your mind so free, A beauty beyond what eyes could see.
+                    I fell for your world, your mind so free, <br />
+                    A beauty beyond what eyes could see. <br />
+                    <br />
 
-                    I knew nothing, yet knew it all, Like echoes from a time long gone. Was this love, or just a dream? A feeling too deep, too unseen.
+                    I knew nothing, yet knew it all, <br />
+                    Like echoes from a time long gone. <br />
+                    Was this love, or just a dream? <br />
+                    A feeling too deep, too unseen. <br />
+                    <br />
 
-                    I asked for friendship, nothing more, Afraid to knock on love's closed door. But silence stood where words should be,
+                    I asked for friendship, nothing more,<br />
+                    Afraid to knock on love's closed door. <br />
+                    But silence stood where words should be, <br />
+                    And I thought, maybe you're not for me. <br />
+                    <br />
 
-                    And I thought, maybe you're not for me.
+                    So I left, I let you go, <br />
+                    Buried feelings you'd never know. <br />
+                    But years passed, and there you were, <br />
+                    A ghost turned real, standing near. <br />
+                    <br />
 
-                    So I left, I let you go, Buried feelings you'd never know. But years passed, and there you were, A ghost turned real, standing near.
-
-                    Was I dreaming? Was this true?
-
-                    Heartbeats raced as I looked at you. No more doubts, no more fears, Yes, it was love, through all these years.
+                    Was I dreaming? Was this true?<br />
+                    Heartbeats raced as I looked at you.<br />
+                    No more doubts, no more fears, <br />
+                    Yes, it was love, through all these years. <br />
+                    <br />
                 </p>
             </div>
               {/* dangerouslySetInnerHTML={{ __html: poem.content }} */}
@@ -150,17 +168,27 @@ const Poem = () => {
             </div>
             <div 
               className="prose prose-lg max-w-none text-luxury-body leading-relaxed">
-                <h3> Fading Embers</h3>
-                <p>
-                    I had so much to say, but words got stuck, As I watched you leave, my heart in a heavy lock.
+                <h1 className="text-4xl text-center pb-4 text-luxury-headline"> Fading Embers</h1>
+                <p className='text-center'>
+                    I had so much to say, but words got stuck, <br />
+                    As I watched you leave, my heart in a heavy lock. <br />
+                    <br />
 
-                    You prayed for my solace, but I was drowning deep, My heart lost in a sea, my tears a endless sleep.
+                    You prayed for my solace, but I was drowning deep, <br />
+                    My heart lost in a sea, my tears a endless sleep. <br />
+                    <br />
+                    
+                    Now I'm torn, between letting go and holding tight, <br />
+                    Between memories and the dark of night. <br />
+                    <br />
 
-                    Now I'm torn, between letting go and holding tight, Between memories and the dark of night.
+                    Even if we never meet again, I'll bear the pain, <br />
+                    Of losing you, of living without you, in vain. <br />
+                    <br />
 
-                    Even if we never meet again, I'll bear the pain, Of losing you, of living without you, in vain.
-
-                    This is how much I want to stay, To hold on to the past, to keep our love alive today
+                    This is how much I want to stay, <br />
+                    To hold on to the past, to keep our love alive today <br />
+                    <br />
                 </p>
             </div>
             <div>
@@ -172,25 +200,35 @@ const Poem = () => {
             {/*Poem 3 */}
             <div 
               className="prose prose-lg max-w-none text-luxury-body leading-relaxed">
-                <h3> Becoming My Own Home</h3>
-                <p>
-                    I gave my heart, my soul, my time, To love that never felt like mine. I bent, I broke, I lost my way, In hopes that he would always stay.
+                <h1 className="text-4xl text-center pb-4 text-luxury-headline"> Becoming My Own Home</h1>
+                <p className='text-center'>
+                    I gave my heart, my soul, my time, <br />
+                    To love that never felt like mine. <br />
+                    I bent, I broke, I lost my way, <br />
+                    In hopes that he would always stay. <br />
+                    <br />
 
-                    I changed my laugh, my dreams, my light, Dimmed myself to make him shine
+                    I changed my laugh, my dreams, my light, <br />
+                    Dimmed myself to make him shine bright.<br />
+                    <br />
 
-                    bright.
+                    But love should never cost my name<br />
+                    I won't play that losing game.<br />
+                    <br />
 
-                    But love should never cost my name-I won't play that losing game.
-
-                    Now I stand where sorrow grew, Tracing scars I never knew.
-
-                    Softly whispering, "It's okay, You deserve to heal someday."
-
-                    No more chasing, no more pleas, No more drowning just to breathe.
-
-                    I am here, and I am whole, I am enough-body and soul.
-
-                    The love I gave, I'll give to me, My first priority, finally free.
+                    Now I stand where sorrow grew, <br />
+                    Tracing scars I never knew. <br />
+                    Softly whispering, "It's okay, <br />
+                    You deserve to heal someday." <br />
+                    <br />
+                    No more chasing, no more pleas, <br />
+                    No more drowning just to breathe. <br />
+                    I am here, and I am whole,<br />
+                    I am enough-body and soul. <br />
+                    <br />
+                    The love I gave, I'll give to me, <br />
+                    My first priority, finally free. <br />
+                    <br />
                 </p>
             </div>
 
