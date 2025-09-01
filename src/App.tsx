@@ -19,6 +19,7 @@ import Careers from "./pages/Careers";
 import Privacy from "./pages/Privacy";
 import Newsletter from "./pages/Newsletter";
 import Poetry from "./pages/Poetry";
+import Poem from "./pages/Poem";
 import Promotions from "./pages/Promotion";
 import PressKit from "./pages/PressKit";
 import BrandGuidelines from "./pages/BrandGuidelines";
@@ -36,6 +37,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/articles" element={<Articles />} />
           <Route path="/article/:id" element={<Article />} />
+          <Route path="/poem/:id" element={<Poem />} />
           <Route path="/features" element={<Features />} />
           <Route path="/interviews" element={<Interviews />} />
           <Route path="/about" element={<About />} />

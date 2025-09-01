@@ -3,20 +3,18 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import ArticleCard from '../components/ArticleCard';
+import PoemCard from '../components/PoemCard';
 import { Calendar, User, Share2, Facebook, Twitter } from 'lucide-react';
 
-const Article = () => {
+const Poem = () => {
   const { id } = useParams();
 
   // Mock article data
-  const article = {
+  const poem = {
     id: '1',
-    title: 'Power of Personal Style: The Classic Touch',
-    subtitle: 'The most powerful thing about fashion is that its a form of self-expression',
-    image: '/media/payal_1.jpeg',
-    category: 'Fashion',
-    author: 'Payal Ghosh',
+    poet: 'Payal Ghosh',
+    image: '../media/banner_1.jpg',
+    category: 'English',
     date: 'September 1 2025',
     readTime: '2 min read',
     content: `
@@ -66,68 +64,141 @@ const Article = () => {
       <Navigation />
 
       {/* Hero Image */}
-      <section className="relative h-auto md:h-[60vh] overflow-hidden bg-grey-900">
+      <section className="relative h-80 md:h-[40vh] overflow-hidden bg-grey-900">
         <img
-          src={article.image}
-          alt={article.title}
+          src={poem.image}
+          alt={poem.poet}
           className="w-full h-full object-contain "
         />
         <div className="absolute inset-0 bg-black/30" />
         
-        <div className="absolute top-6 left-6 ">
+        <div className="absolute top-6 left-6">
           <Link 
-            to="/articles"
-            className="px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-sm font-medium hover:bg-white transition-colors duration-300"
+            to="/poetry"
+            className="px-4 py-2 bg-white/90 backdrop-blur-sm rounded-full text-sm font-medium hover:bg-white transition-colors duration-300"
           >
-            ← Back to Articles
+            ← Back to Poems
           </Link>
         </div>
       </section>
 
-      {/* Article Content */}
+      {/* Poem Content */}
       <article className="section-luxury">
         <div className="container-luxury max-w-4xl mx-auto">
-          {/* Article Header */}
+          {/* Poem Header */}
           <header className="text-center mb-12 animate-luxury-fade-in">
             <div className="mb-4">
               <span className="px-3 py-1 bg-accent text-accent-foreground text-sm font-medium uppercase tracking-wider rounded-full">
-                {article.category}
+                {poem.category}
               </span>
             </div>
             
             <h1 className="text-luxury-headline mb-4">
-              {article.title}
+              {poem.poet}
             </h1>
             
-            <p className="text-luxury-subtitle mb-8">
-              {article.subtitle}
-            </p>
+            {/* <p className="text-luxury-subtitle mb-8">
+              {poem.subtitle}
+            </p> */}
             
             <div className="flex items-center justify-center gap-6 text-muted-foreground">
-              <span className="flex items-center gap-2">
+              {/* <span className="flex items-center gap-2">
                 <User size={16} />
-                {article.author}
-              </span>
+                {poem.poet}
+              </span> */}
               <span className="flex items-center gap-2">
                 <Calendar size={16} />
-                {article.date}
+                {poem.date}
               </span>
-              <span>{article.readTime}</span>
+              <span>{poem.readTime}</span>
             </div>
           </header>
 
-          {/* Article Body */}
+          {/* Poem Body */}
           <div className="animate-luxury-slide-up">
             <div 
-              className="prose prose-lg max-w-none text-luxury-body leading-relaxed"
-              dangerouslySetInnerHTML={{ __html: article.content }}
-            />
+              className="prose prose-lg max-w-none text-luxury-body leading-relaxed">
+                <h3> Yes it was love</h3>
+                <p>
+                    I don't know when I first heard your name, A name so common, yet never the same.
+
+                    Spoken by you, it felt so rare, A melody drifting in the air.
+
+                    Then I saw your art, your gentle hand, Lines and colors I couldn't withstand.
+
+                    I fell for your world, your mind so free, A beauty beyond what eyes could see.
+
+                    I knew nothing, yet knew it all, Like echoes from a time long gone. Was this love, or just a dream? A feeling too deep, too unseen.
+
+                    I asked for friendship, nothing more, Afraid to knock on love's closed door. But silence stood where words should be,
+
+                    And I thought, maybe you're not for me.
+
+                    So I left, I let you go, Buried feelings you'd never know. But years passed, and there you were, A ghost turned real, standing near.
+
+                    Was I dreaming? Was this true?
+
+                    Heartbeats raced as I looked at you. No more doubts, no more fears, Yes, it was love, through all these years.
+                </p>
+            </div>
+              {/* dangerouslySetInnerHTML={{ __html: poem.content }} */}
+            <div>
+                <blockquote className="font-elegant text-xl italic text-center py-8 px-4 border-l-4 border-accent my-8">
+                    "Fashion is not just about clothing; it is about expressing who we are. The classic touch is timeless and powerful, a reflection of our authentic selves that never goes out of style."
+                    <cite className="block text-base text-muted-foreground mt-4 not-italic">— Anonymous</cite>
+                </blockquote>
+            </div>
+            <div 
+              className="prose prose-lg max-w-none text-luxury-body leading-relaxed">
+                <h3> Fading Embers</h3>
+                <p>
+                    I had so much to say, but words got stuck, As I watched you leave, my heart in a heavy lock.
+
+                    You prayed for my solace, but I was drowning deep, My heart lost in a sea, my tears a endless sleep.
+
+                    Now I'm torn, between letting go and holding tight, Between memories and the dark of night.
+
+                    Even if we never meet again, I'll bear the pain, Of losing you, of living without you, in vain.
+
+                    This is how much I want to stay, To hold on to the past, to keep our love alive today
+                </p>
+            </div>
+            <div>
+                <blockquote className="font-elegant text-xl italic text-center py-8 px-4 border-l-4 border-accent my-8">
+                    "Your eyes hold everything my soul thrists for"
+                    <cite className="block text-base text-muted-foreground mt-4 not-italic">— Anonymous</cite>
+                </blockquote>
+            </div>
+            {/*Poem 3 */}
+            <div 
+              className="prose prose-lg max-w-none text-luxury-body leading-relaxed">
+                <h3> Becoming My Own Home</h3>
+                <p>
+                    I gave my heart, my soul, my time, To love that never felt like mine. I bent, I broke, I lost my way, In hopes that he would always stay.
+
+                    I changed my laugh, my dreams, my light, Dimmed myself to make him shine
+
+                    bright.
+
+                    But love should never cost my name-I won't play that losing game.
+
+                    Now I stand where sorrow grew, Tracing scars I never knew.
+
+                    Softly whispering, "It's okay, You deserve to heal someday."
+
+                    No more chasing, no more pleas, No more drowning just to breathe.
+
+                    I am here, and I am whole, I am enough-body and soul.
+
+                    The love I gave, I'll give to me, My first priority, finally free.
+                </p>
+            </div>
 
             {/* Social Share */}
             <div className="flex items-center justify-center gap-4 mt-12 pt-8 border-t border-border">
               <span className="text-muted-foreground flex items-center gap-2">
                 <Share2 size={16} />
-                Share this article:
+                Share this poem:
               </span>
               <button className="p-2 hover:text-accent transition-colors duration-300">
                 <Facebook size={20} />
@@ -163,4 +234,4 @@ const Article = () => {
   );
 };
 
-export default Article;
+export default Poem;

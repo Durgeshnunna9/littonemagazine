@@ -2,48 +2,42 @@
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import ArticleCard from '../components/ArticleCard';
+import PoemCard from '../components/PoemCard';
 import { Filter, Search, TrendingUp, Clock, Calendar } from 'lucide-react';
 
 const Poetries = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [sortBy, setSortBy] = useState('latest');
 
-  const categories = ['English', 'Hindi', 'All'];
+  const categories = ['All', 'English', 'Hindi' ];
   
   const poems = [
     {
       id: '1',
-      title: 'Yes, It Was Love',
-      excerpt: 'The most powerful thing about fashion is that its a form of self-expression',
-      image: '../media/payal_1.jpeg',
-      category: 'Fashion',
-      author: 'Payal Ghosh',
+      poet: 'Payal Ghosh',
+      image: '/media/payal_1.jpeg',
+      category: 'English',
       date: 'September 1 2025',
       readTime: '2 min read',
       trending: true
     },
-    {
-      id: '2',
-      title: 'Minimalist Architecture: The Poetry of Empty Space',
-      excerpt: 'Exploring how contemporary architects are using negative space and natural light to create homes that feel both monumental and intimate.',
-      image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2053&q=80',
-      category: 'Architecture',
-      author: 'Marcus Webb',
-      date: 'Dec 12, 2023',
-      readTime: '8 min read'
-    },
-    {
-      id: '3',
-      title: 'The Michelin Revolution: Beyond Three Stars',
-      excerpt: 'Meet the visionary chefs who are transforming fine dining by challenging traditional boundaries and incorporating molecular gastronomy.',
-      image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-      category: 'Culinary',
-      author: 'Sofia Rodriguez',
-      date: 'Dec 10, 2023',
-      readTime: '15 min read',
-      trending: true
-    },
+    // {
+    //   id: '2',
+    //   poet: 'Marcus Webb',
+    //   image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2053&q=80',
+    //   category: 'Hindi',
+    //   date: 'Dec 12, 2023',
+    //   readTime: '8 min read'
+    // },
+    // {
+    //   id: '3',
+    //   poet: 'Sofia Rodriguez',
+    //   image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+    //   category: 'English',
+    //   date: 'Dec 10, 2023',
+    //   readTime: '15 min read',
+      
+    // },
     // {
     //   id: '4',
     //   title: 'Wellness Retreats for the Modern Soul: A Journey Within',
@@ -107,11 +101,11 @@ const Poetries = () => {
     // }
   ];
 
-  const filteredArticles = selectedCategory === 'All' 
-    ? articles 
-    : articles.filter(article => article.category === selectedCategory);
+  const filteredPoems = selectedCategory === 'All' 
+    ? poems 
+    : poems.filter(poetry => poetry.category === selectedCategory);
 
-  const trendingArticles = articles.filter(article => article.trending);
+  const trendingPoems = poems.filter(poetry => poetry.trending);
 
   return (
     <div className="min-h-screen">
@@ -125,7 +119,7 @@ const Poetries = () => {
               Editorial Collection
             </span>
           </div>
-          <h1 className="text-luxury-headline mb-4">Articles</h1>
+          <h1 className="text-luxury-headline mb-4">Poetries</h1>
           <p className="text-luxury-subtitle max-w-2xl mx-auto">
             Explore our curated collection of stories that define contemporary luxury, 
             from exclusive interviews with industry leaders to in-depth explorations of cultural movements
@@ -134,7 +128,7 @@ const Poetries = () => {
       </section>
 
       {/* Trending Section */}
-      {trendingArticles.length > 0 && (
+      {trendingPoems.length > 0 && (
         <section className="py-8 border-b border-border">
           <div className="container-luxury">
             <div className="flex items-center gap-2 mb-6">
@@ -142,9 +136,9 @@ const Poetries = () => {
               <h2 className="font-luxury font-semibold text-xl">Trending Now</h2>
             </div>
             <div className="flex gap-4 overflow-x-auto pb-2">
-              {trendingArticles.map((article) => (
-                <div key={`trending-${article.id}`} className="flex-shrink-0 w-72">
-                  <ArticleCard {...article} />
+              {trendingPoems.map((poetry) => (
+                <div key={`trending-${poetry.id}`} className="flex-shrink-0 w-72">
+                  <PoemCard {...poetry} />
                 </div>
               ))}
             </div>
@@ -163,7 +157,7 @@ const Poetries = () => {
             
             <div className="flex items-center gap-4">
               <span className="text-muted-foreground text-sm">
-                {filteredArticles.length} articles found
+                {filteredPoems.length} poems found
               </span>
               
               <select 
@@ -197,15 +191,15 @@ const Poetries = () => {
         </div>
       </section>
 
-      {/* Articles Grid */}
+      {/* Poetries Grid */}
       <section className="section-luxury">
         <div className="container-luxury">
-          {filteredArticles.length === 0 ? (
+          {filteredPoems.length === 0 ? (
             <div className="text-center py-16">
               <div className="w-16 h-16 bg-muted rounded-full flex items-center justify-center mx-auto mb-4">
                 <Search size={24} className="text-muted-foreground" />
               </div>
-              <h3 className="font-luxury font-semibold text-xl mb-2">No Articles Found</h3>
+              <h3 className="font-luxury font-semibold text-xl mb-2">No Poems Found</h3>
               <p className="text-muted-foreground mb-6">
                 Try adjusting your filters or search terms to find what you're looking for.
               </p>
@@ -213,31 +207,31 @@ const Poetries = () => {
                 onClick={() => setSelectedCategory('All')}
                 className="btn-luxury-secondary"
               >
-                Show All Articles
+                Show All Poems
               </button>
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredArticles.map((article, index) => (
+              {filteredPoems.map((poetry, index) => (
                 <div 
-                  key={article.id} 
+                  key={poetry.id} 
                   className="animate-luxury-slide-up" 
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <ArticleCard {...article} />
+                  <PoemCard {...poetry} />
                 </div>
               ))}
             </div>
           )}
 
           {/* Load More Button */}
-          {filteredArticles.length > 0 && (
+          {filteredPoems.length > 0 && (
             <div className="text-center mt-12">
               <button className="btn-luxury-secondary">
-                Load More Articles
+                Load More Poems
               </button>
               <p className="text-muted-foreground text-sm mt-4">
-                Showing {filteredArticles.length} of {articles.length} articles
+                Showing {filteredPoems.length} of {poems.length} poems
               </p>
             </div>
           )}
