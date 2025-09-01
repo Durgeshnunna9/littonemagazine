@@ -18,7 +18,8 @@ import Architecture from "./pages/Architecture";
 import Careers from "./pages/Careers";
 import Privacy from "./pages/Privacy";
 import Newsletter from "./pages/Newsletter";
-import Advertise from "./pages/Advertise";
+import Poetry from "./pages/Poetry";
+import Promotions from "./pages/Promotion";
 import PressKit from "./pages/PressKit";
 import BrandGuidelines from "./pages/BrandGuidelines";
 import NotFound from "./pages/NotFound";
@@ -42,7 +43,8 @@ const App = () => (
           <Route path="/careers" element={<Careers />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/newsletter" element={<Newsletter />} />
-          <Route path="/advertise" element={<Advertise />} />
+          <Route path="/promotions" element={<Promotions />} />
+          <Route path="/poetry" element={<Poetry />} />
           <Route path="/press" element={<PressKit />} />
           <Route path="/brand" element={<BrandGuidelines />} />
           {/* Category routes */}

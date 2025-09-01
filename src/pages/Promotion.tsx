@@ -4,7 +4,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Target, TrendingUp, Users, Globe } from 'lucide-react';
 
-const Advertise = () => {
+const Promotions = () => {
   const stats = [
     { icon: Users, value: '500K+', label: 'Monthly Readers' },
     { icon: Globe, value: '50+', label: 'Countries' },
@@ -115,4 +115,4 @@ const Advertise = () => {
   );
 };
 
-export default Advertise;
+export default Promotions;

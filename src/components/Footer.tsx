@@ -27,7 +27,7 @@ const Footer = () => {
       title: 'Connect',
       links: [
         { label: 'Newsletter', href: '/newsletter' },
-        { label: 'Advertise', href: '/advertise' },
+        { label: 'Promotions', href: '/promotions' },
         { label: 'Press Kit', href: '/press' },
         { label: 'Brand Guidelines', href: '/brand' }
       ]
@@ -48,7 +48,7 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="md:col-span-1">
             <Link to="/" className="text-luxury-title font-luxury font-bold mb-4 block">
-              <span className="text-foreground">LIT TONE</span>
+              <span className="text-foreground">THE LIT TONE</span>
             </Link>
             <p className="text-muted-foreground mb-6 max-w-sm">
               Defining contemporary luxury through exceptional storytelling 

@@ -11,9 +11,11 @@ const Navigation = () => {
     { label: 'Home', path: '/' },
     { label: 'Articles', path: '/articles' },
     { label: 'Features', path: '/features' },
+    {label: 'Poetry', path: '/poetry'},
     { label: 'Interviews', path: '/interviews' },
     { label: 'About', path: '/about' },
-    { label: 'Contact', path: '/contact' }
+    { label: 'Contact', path: '/contact' },
+    
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -24,7 +26,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="text-luxury-title font-elegant font-bold">
-            <span className="text-foreground text-4xl">LIT TONE</span>
+            <span className="text-foreground text-4xl">THE LIT TONE</span>
           </Link>
 
           {/* Desktop Navigation */}

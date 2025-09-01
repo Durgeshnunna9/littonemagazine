@@ -5,16 +5,16 @@ import Footer from '../components/Footer';
 import ArticleCard from '../components/ArticleCard';
 import { Filter, Search, TrendingUp, Clock, Calendar } from 'lucide-react';
 
-const Articles = () => {
+const Poetries = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [sortBy, setSortBy] = useState('latest');
 
-  const categories = ['All', 'Fashion', 'Lifestyle', 'Culture', 'Architecture', 'Culinary', 'Travel'];
+  const categories = ['English', 'Hindi', 'All'];
   
-  const articles = [
+  const poems = [
     {
       id: '1',
-      title: 'Power of Personal Style: The Classic Touch',
+      title: 'Yes, It Was Love',
       excerpt: 'The most powerful thing about fashion is that its a form of self-expression',
       image: '../media/payal_1.jpeg',
       category: 'Fashion',
@@ -23,27 +23,27 @@ const Articles = () => {
       readTime: '2 min read',
       trending: true
     },
-    // {
-    //   id: '2',
-    //   title: 'Minimalist Architecture: The Poetry of Empty Space',
-    //   excerpt: 'Exploring how contemporary architects are using negative space and natural light to create homes that feel both monumental and intimate.',
-    //   image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2053&q=80',
-    //   category: 'Architecture',
-    //   author: 'Marcus Webb',
-    //   date: 'Dec 12, 2023',
-    //   readTime: '8 min read'
-    // },
-    // {
-    //   id: '3',
-    //   title: 'The Michelin Revolution: Beyond Three Stars',
-    //   excerpt: 'Meet the visionary chefs who are transforming fine dining by challenging traditional boundaries and incorporating molecular gastronomy.',
-    //   image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-    //   category: 'Culinary',
-    //   author: 'Sofia Rodriguez',
-    //   date: 'Dec 10, 2023',
-    //   readTime: '15 min read',
-    //   trending: true
-    // },
+    {
+      id: '2',
+      title: 'Minimalist Architecture: The Poetry of Empty Space',
+      excerpt: 'Exploring how contemporary architects are using negative space and natural light to create homes that feel both monumental and intimate.',
+      image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2053&q=80',
+      category: 'Architecture',
+      author: 'Marcus Webb',
+      date: 'Dec 12, 2023',
+      readTime: '8 min read'
+    },
+    {
+      id: '3',
+      title: 'The Michelin Revolution: Beyond Three Stars',
+      excerpt: 'Meet the visionary chefs who are transforming fine dining by challenging traditional boundaries and incorporating molecular gastronomy.',
+      image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      category: 'Culinary',
+      author: 'Sofia Rodriguez',
+      date: 'Dec 10, 2023',
+      readTime: '15 min read',
+      trending: true
+    },
     // {
     //   id: '4',
     //   title: 'Wellness Retreats for the Modern Soul: A Journey Within',
@@ -249,4 +249,4 @@ const Articles = () => {
   );
 };
 
-export default Articles;
+export default Poetries;

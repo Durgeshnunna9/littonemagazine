@@ -12,62 +12,65 @@ const Article = () => {
   // Mock article data
   const article = {
     id: '1',
-    title: 'The Renaissance of Haute Couture: Where Tradition Meets Innovation',
-    subtitle: 'Exploring how traditional craftsmanship meets contemporary design in today\'s fashion landscape',
-    image: 'https://images.unsplash.com/photo-1469334031218-e382a71b716b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+    title: 'Power of Personal Style: The Classic Touch',
+    subtitle: 'The most powerful thing about fashion is that its a form of self-expression',
+    image: '../media/payal_2.jpg',
     category: 'Fashion',
-    author: 'Isabella Chen',
-    date: 'December 15, 2023',
-    readTime: '8 min read',
+    author: 'Payal Ghosh',
+    date: 'September 1 2025',
+    readTime: '2 min read',
     content: `
-      <p>In the ever-evolving world of fashion, haute couture remains the pinnacle of sartorial artistry. This season, we witness a fascinating renaissance where centuries-old techniques merge seamlessly with cutting-edge innovation, creating garments that are both timeless and thoroughly contemporary.</p>
-      
-      <p>The ateliers of Paris, long considered the guardians of traditional craftsmanship, are embracing new technologies while maintaining their commitment to hand-sewn excellence. From 3D printing delicate lace patterns to using sustainable materials in ways never before imagined, today's couturiers are redefining what luxury means in the 21st century.</p>
+      <p>Fashion changes every season, but personal style lasts forever. Trends may come and go, but style is a steady reflection of who we are. It is more than clothes it is about confidence, personality, and self-expression.
+
+        My own style has always been classic. For me, simplicity is not boring it is elegance in its truest form. A white shirt, a little black dress, or a well-fitted blazer speaks louder than any short-lived trend. Classic fashion doesn't need to be loud; it stands out quietly. I believe that. "Real style starts with simplicity, grows with class, and lasts with elegance."
+
+        The beauty of classic fashion is that it never goes out of place. It fits everywhere in the office, at a dinner party, or even on a casual outing. A pearl necklace passed down through family, a timeless trench coat, or soft. neutral shades each one carries a touch of grace. While fashion often pushes us to keep up, the classic style reminds us to stay grounded and true to ourselves.</p>
       
       <blockquote class="font-elegant text-xl italic text-center py-8 px-4 border-l-4 border-accent my-8">
-        "Couture is not just about creating beautiful clothes; it's about preserving a cultural heritage while pushing the boundaries of what's possible."
-        <cite class="block text-base text-muted-foreground mt-4 not-italic">— Maria Grazia Chiuri, Creative Director</cite>
+        "Fashion is not just about clothing; it is about expressing who we are. The classic touch is timeless and powerful, a reflection of our authentic selves that never goes out of style."
+        <cite class="block text-base text-muted-foreground mt-4 not-italic">— Anonymous</cite>
       </blockquote>
       
-      <p>The modern atelier is a place where tradition and innovation dance together in perfect harmony. Master craftspeople, some with decades of experience, work alongside young designers fluent in digital design tools. This intergenerational collaboration is producing some of the most exciting work we've seen in years.</p>
-      
-      <p>Sustainability, once considered antithetical to luxury, is now driving innovation in the most prestigious fashion houses. Designers are experimenting with lab-grown silk, recycled precious metals, and innovative dyeing techniques that require minimal water and produce zero waste.</p>
-      
-      <p>As we look toward the future, it's clear that haute couture will continue to evolve while maintaining its essential character: the celebration of human craftsmanship and the pursuit of absolute beauty in clothing.</p>
+      <p>Personal style is powerful because it gives us confidence. When I dress in a way that feels like me, I carry myself differently. My steps are firmer. my presence stronger. Clothes stop being just fabric they become part of who I am. The classic style, especially, feels like wearing quiet confidence with grace.
+
+        At the end of the day, fashion only dresses us, but style defines us. For me, choosing a classic look is not just about appearance it is about staying connected to who I am. In its simplicity, I feel strong. In its elegance, I feel free And in its timelessness, I find the power to express myself without saying a word.
+
+      </p>
+      <h1 className="text-2xl font-bold">HOW MUCH DOES IT COST YOU TO ALIGN YOUR PERSONAL STYLE WITH YOUR AUTHENTIC SELF, AND HOW DOES THIS IMPACT YOUR INTERACTIONS WITH OTHERS</h1>
     `
   };
 
-  const relatedArticles = [
-    {
-      id: '2',
-      title: 'Minimalist Architecture: Form Follows Function',
-      excerpt: 'A deep dive into the world of contemporary minimalist design.',
-      image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2053&q=80',
-      category: 'Architecture',
-      author: 'Marcus Webb',
-      date: 'Dec 12, 2023'
-    },
-    {
-      id: '3',
-      title: 'The Art of Michelin Gastronomy',
-      excerpt: 'Behind the scenes with world-renowned chefs.',
-      image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-      category: 'Culinary',
-      author: 'Sofia Rodriguez',
-      date: 'Dec 10, 2023'
-    }
-  ];
+  // const relatedArticles = [
+  //   {
+  //     id: '2',
+  //     title: 'Minimalist Architecture: Form Follows Function',
+  //     excerpt: 'A deep dive into the world of contemporary minimalist design.',
+  //     image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2053&q=80',
+  //     category: 'Architecture',
+  //     author: 'Marcus Webb',
+  //     date: 'Dec 12, 2023'
+  //   },
+  //   {
+  //     id: '3',
+  //     title: 'The Art of Michelin Gastronomy',
+  //     excerpt: 'Behind the scenes with world-renowned chefs.',
+  //     image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+  //     category: 'Culinary',
+  //     author: 'Sofia Rodriguez',
+  //     date: 'Dec 10, 2023'
+  //   }
+  // ];
 
   return (
     <div className="min-h-screen">
       <Navigation />
 
       {/* Hero Image */}
-      <section className="relative h-96 md:h-[60vh] overflow-hidden">
+      <section className="relative h-80 md:h-[60vh] overflow-hidden bg-grey-900">
         <img
           src={article.image}
           alt={article.title}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-contain "
         />
         <div className="absolute inset-0 bg-black/30" />
         
@@ -138,7 +141,7 @@ const Article = () => {
       </article>
 
       {/* Related Articles */}
-      <section className="section-luxury bg-luxury-pearl">
+      {/* <section className="section-luxury bg-luxury-pearl">
         <div className="container-luxury">
           <h2 className="text-luxury-title text-center mb-12">Related Articles</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -153,7 +156,7 @@ const Article = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       <Footer />
     </div>
