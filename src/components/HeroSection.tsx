@@ -1,8 +1,10 @@
 
 import React from 'react';
 import { ArrowRight, Play } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const HeroSection = () => {
+  const navigate = useNavigate();
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
@@ -32,7 +34,7 @@ const HeroSection = () => {
         </p>
 
         <div className="flex items-center justify-center gap-4">
-          <button className="btn-luxury-primary group" onClick={() => window.location.href = '/article/1'}>
+          <button className="btn-luxury-primary group" onClick={() => navigate('/article/1')}>
             Read Full Story
             <ArrowRight size={16} className="ml-2 transition-transform group-hover:translate-x-1" />
           </button>

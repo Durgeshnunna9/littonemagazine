@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import emailjs from 'emailjs-com'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -23,31 +24,47 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Form submission logic would go here
-    setIsSubmitted(true);
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({ name: '', email: '', subject: '', message: '' });
-    }, 3000);
+  
+    emailjs.send(
+      'service_uywma0h',       // from EmailJS dashboard
+      'template_nsgwya9',      // your email template ID
+      {
+        name: formData.name,
+        email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+      },
+      '5tJjmHnrVmuCPnhud'           // public key from EmailJS
+    )
+    .then(() => {
+      setIsSubmitted(true);
+      setTimeout(() => {
+        setIsSubmitted(false);
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      }, 3000);
+    })
+    .catch((error) => {
+      console.error('EmailJS error:', error);
+    });
   };
 
   const contactInfo = [
     {
       icon: Mail,
       label: 'Email',
-      value: 'editorial@luxemagazine.com',
-      href: 'mailto:editorial@luxemagazine.com'
+      value: 'littonemagazine777@gmail.com',
+      href: 'mailto:littonemagazine777@gmail.com'
     },
     {
       icon: Phone,
       label: 'Phone',
-      value: '+1 (555) 123-4567',
-      href: 'tel:+15551234567'
+      value: '+91 7330866686',
+      href: 'tel:+91 7330866686'
     },
     {
       icon: MapPin,
       label: 'Address',
-      value: '123 Fashion Avenue, New York, NY 10018',
+      value: 'Mumbai, India',
       href: '#'
     }
   ];
@@ -189,15 +206,14 @@ const Contact = () => {
               <div className="bg-luxury-pearl p-8 rounded-2xl">
                 <h3 className="font-luxury font-semibold text-xl mb-4">Editorial Submissions</h3>
                 <p className="text-muted-foreground mb-4">
-                  Interested in contributing to Luxe Magazine? We welcome story pitches, 
+                  Interested in contributing to The Lite Tone Magazine? We welcome story pitches, 
                   photography submissions, and collaboration proposals from talented creators.
                 </p>
-                <a 
-                  href="mailto:submissions@luxemagazine.com"
+                <p 
                   className="link-luxury font-medium"
                 >
-                  submissions@luxemagazine.com
-                </a>
+                  littonemagazine777@gmail.com
+                </p>
               </div>
             </div>
           </div>
