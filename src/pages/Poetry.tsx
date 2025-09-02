@@ -15,7 +15,7 @@ const Poetries = () => {
     {
       id: '1',
       poet: 'Payal Ghosh',
-      image: '/media/payal_1.jpeg',
+      image: '/media/payal_6.jpeg',
       category: 'English',
       date: 'September 1 2025',
       readTime: '2 min read',

@@ -77,7 +77,7 @@ const Article = () => {
         <div className="absolute top-6 left-6 ">
           <Link 
             to="/articles"
-            className="px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-sm font-medium hover:bg-white transition-colors duration-300"
+            className="px-4 py-2 bg-white/90 backdrop-blur-sm rounded-full text-sm font-medium hover:bg-white transition-colors duration-300"
           >
             ← Back to Articles
           </Link>

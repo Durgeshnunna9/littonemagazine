@@ -90,7 +90,7 @@ const Newsletter = () => {
               <div className="animate-luxury-fade-in text-center p-6">
                 <CheckCircle size={48} className="text-accent mx-auto mb-4" />
                 <h3 className="font-luxury font-semibold text-xl mb-2 text-white">
-                  Welcome to Luxe!
+                  Welcome to The Lit Tone Magazine!
                 </h3>
                 <p className="text-white/70">
                   Thank you for subscribing. Check your inbox for a welcome message.
